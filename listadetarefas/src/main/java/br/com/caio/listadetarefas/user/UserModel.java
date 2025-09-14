@@ -5,6 +5,7 @@ import java.util.UUID;
 
 import org.hibernate.annotations.CreationTimestamp;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -28,6 +29,7 @@ public class UserModel {
     @GeneratedValue(generator = "UUID") // Gerar o ID automaticamente
     private UUID id;// Chave primária, chave única para rep
 
+    @Column(unique = true) // Tratamente de user,name e pass sejam dif = únicos
     //Deixando assim as colunas do BD serão os atributos abaixo
     private String username;
     private String name;
