@@ -11,6 +11,6 @@ public class UserController {
 
     @PostMapping("/")
     public void create(@RequestBody UserModel userModel) {
-        System.out.println("FOI,FOI,FOI DELE!");
+        System.out.println(userModel.getUsername());
     }
 }
